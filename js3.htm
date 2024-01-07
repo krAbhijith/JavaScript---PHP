@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication</title>
+</head>
+<body>
+        Enter the number :
+        <input type="number" id="num">
+        <br>
+        Enter the limit :
+        <input type="number" id="limit">
+        <br>
+        <input type="submit" value="Sumbit" onclick="show(num.value, limit.value)">
+        <div id="result">
+        </div>
+</body>
+<script>
+    function show(num, limit) {
+        const RESULT = document.querySelector("#result");
+        RESULT.innerHTML += `<h1>Multiplication Table of ${num}</h1>`;
+        var i = 1;
+        while (i<=limit) {
+            RESULT.innerHTML+= `<br>${i}*${num}=${i*num}`;
+            i++;
+        }
+    }
+</script>
+</html>

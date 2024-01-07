@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Color</title>
+</head>
+<body>
+    <table width="10%" height="10%" border="3" cellspacing="8" cellpadding="10">
+        <td onmouseenter="change(1)">Red</td>
+        <td onmouseenter="change(2)">Blue</td>
+        <td onmouseenter="change(3)">Green</td>
+        <td onmouseenter="change(4)">Ash</td>
+    </table>
+</body>
+<script>
+    function change(i) {
+        var bg_color = ['red','blue','green','#cce'];
+        document.bgColor = bg_color[i-1];
+    }
+</script>
+</html>

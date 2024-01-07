@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circle</title>
+</head>
+<body>
+    <form>
+        <table>
+            <tr>
+                <td>Enter the radius</td>
+                <td><input type="number" id="radius"></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Submit" onclick="area(radius.value)"></td>
+            </tr>
+            <tr>
+                <td id="result-area" colspan="2"></td>
+            </tr>
+            <tr>
+                <td id="result-circumference" colspan="2"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+<script>
+    const AREA = document.getElementById("result-area");
+    const CIRCUMFERENCE = document.getElementById("result-circumference");
+    function area(rad) {
+        ar = 3.14 * rad * rad;
+        cir = 2 * 3.14 * rad;
+        AREA.innerHTML = `Area = ${ar}`;
+        CIRCUMFERENCE.innerHTML = `Circumference = ${cir}`;
+        console.log("hello");
+    }
+</script>
+</html>
