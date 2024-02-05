@@ -4,8 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Numbers</title>
+</head>
+<body>
+    <h1>Check whether the number is Perfect, Abudant or Deficient</h1>
+    Enter Number: <input type="number" name="num">
+    <br>
+    <input type="submit" value="Submit" onclick="checkNumber()">
+    <h3 id="result"></h3>
+</body>
     <script>
-        function checkNumber(num) {
+        function checkNumber() {
+            num = document.querySelector("num").value;
+            console.log(num);
             const RESULT = document.querySelector("#result");
             var flag,number,remainder,addition=0,i;
             flag = num;
@@ -16,19 +26,12 @@
                 }
             }
             if (addition == flag) {
-                RESULT.innerHTML = `Number is Perfect`;
+                window.alert("number is Perfect");
             } else if(addition > flag) {
-                RESULT.innerHTML = `Number is Abudant`;
+                window.alert("number is abudant");
             }else{
-                RESULT.innerHTML = `Number is Deficient`;
+                window.alert("number is deficient");
             }
         }
     </script>
-</head>
-<body>
-    <h1>Check whether the number is Perfect, Abudant or Deficient</h1>
-    Enter Number: <input type="number" id="num">
-    <input type="submit" value="Submit" onclick="checkNumber(num.value)">
-    <h3 id="result"></h3>
-</body>
 </html>

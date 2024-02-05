@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome</title>
+</head>
+<body>
+    Enter String :
+    <input type="text" name="textBox" id="textBox">
+    <input type="button" value="Check" onclick="check(textBox.value)">
+</body>
+<script>
+    function check(str) {
+        // Convert the string to lowercase and remove non-alphanumeric characters
+        str = str.toLowerCase().replace(/[\W_]/g, '');
+        
+        // Check if the string is equal to its reverse
+        if (str === str.split('').reverse().join('')){
+            alert(`The given string ${str} is palindrome `);
+        }else{
+            alert(`The given string ${str} is palindrome `);
+        }
+    }
+</script>
+</html>

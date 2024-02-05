@@ -19,10 +19,10 @@
 <script>
     function show(num, limit) {
         const RESULT = document.querySelector("#result");
-        RESULT.innerHTML += `<h1>Multiplication Table of ${num}</h1>`;
+        document.write("Multiplication table: "+num);
         var i = 1;
         while (i<=limit) {
-            RESULT.innerHTML+= `<br>${i}*${num}=${i*num}`;
+            document.write("<br>"+i+"*"+num+"="+(i*num));
             i++;
         }
     }

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onblur Onfocus Event</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Change Text Box Colors on Focus and Blur</title>
+</head>
+<body>
+Change the text color and backgroundColor of a textbox using on focus and onblur <br>
+<input type="text" id="myTextBox" class="input-box" placeholder="Type something here" 
+       onfocus="changeColor('myTextBox', 'red', 'yellow')" 
+       onblur="changeColor('myTextBox', 'white', 'black')">
+<input type="button" value="Click here">
+
+<script>
+    function changeColor(elementId, textColor, bgColor) {
+        var element = document.getElementById(elementId);
+        element.style.color = textColor;
+        element.style.backgroundColor = bgColor;
+    }
+</script>
+
+</body>
+</html>
+
+</body>
+</html>

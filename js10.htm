@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Password Validation</title>
+
+</head>
+<body>
+
+<label for="password">Password:</label>
+<input type="password" id="password">
+<br><span id="passwordWarning" class="warning"></span>
+<br><br>
+<label for="confirmPassword">Confirm Password:</label>
+<input type="password" id="confirmPassword">
+<br><span id="confirmPasswordWarning" class="warning"></span>
+<br><br>
+<input type="submit" onclick="validatePassword()">
+<input type="reset">
+
+<script>
+function validatePassword() {
+    var password = document.getElementById("password").value;
+    var confirmPassword = document.getElementById("confirmPassword").value;
+
+    // Clear previous warning messages
+    document.getElementById("passwordWarning").innerText = "";
+    document.getElementById("confirmPasswordWarning").innerText = "";
+
+    // Check if password and confirm password are the same
+    if (password !== confirmPassword) {
+        document.getElementById("confirmPasswordWarning").innerText = "**Password and confirm password do not match.";
+        return;
+    }
+
+    // Check if password length is greater than 8 characters
+    if (password.length < 8) {
+        document.getElementById("passwordWarning").innerText = "**Password must be at least 8 characters long.";
+        return;
+    }
+
+    // If both conditions are satisfied
+    alert("Your password created successfully");
+}
+</script>
+
+</body>
+</html>
