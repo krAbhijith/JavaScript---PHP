@@ -1,51 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Capital</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capital</title>
 </head>
+
 <body>
-select a country from the list 
-<br>
-<br>
-<select id="countrySelect" onchange="showCapital()">
-    <option value="">Select a country</option>
-    <option value="India">India</option>
-    <option value="USA">United States</option>
-    <option value="UK">United Kingdom</option>
-    <option value="France">France</option>
-    <option value="Germany">Germany</option>
-    <!-- Add more countries as needed -->
-</select>
-<br>
-<br>
-<input type="text" id="capitalTextBox" readonly>
+    select a country from the list
+    <br>
+    <br>
+    <select id="countrySelect" onchange="showCapital()">
+        <option value="">Select a country</option>
+        <option value="India">India</option>
+        <option value="USA">United States</option>
+        <option value="UK">United Kingdom</option>
+        <option value="France">France</option>
+        <option value="Germany">Germany</option>
+        <!-- Add more countries as needed -->
+    </select>
+    <br>
+    <br>
+    <input type="text" id="capitalTextBox" readonly>
 
-<script>
-function showCapital() {
-    // Get the selected country
-    var countrySelect = document.getElementById("countrySelect");
-    var selectedCountry = countrySelect.options[countrySelect.selectedIndex].value;
+    <script>
+        function showCapital() {
+            // Get the selected country
+            var countrySelect = document.getElementById("countrySelect");
+            var selectedCountry = countrySelect.options[countrySelect.selectedIndex].value;
 
-    // Map of country names to their capitals
-    var capitalMap = {
-        "India" : "New Delhi",
-        "USA": "Washington, D.C.",
-        "UK": "London",
-        "France": "Paris",
-        "Germany": "Berlin"
-        // Add more mappings as needed
-    };
+            // Map of country names to their capitals
+            var capitalMap = {
+                "India": "New Delhi",
+                "USA": "Washington, D.C.",
+                "UK": "London",
+                "France": "Paris",
+                "Germany": "Berlin"
+                // Add more mappings as needed
+            };
 
-    // Get the capital name based on the selected country
-    var capital = capitalMap[selectedCountry];
+            // Get the capital name based on the selected country
+            var capital = capitalMap[selectedCountry];
 
-    // Display the capital name in the text box
-    var capitalTextBox = document.getElementById("capitalTextBox");
-    capitalTextBox.value = capital;
-}
-</script>
+            // Display the capital name in the text box
+            var capitalTextBox = document.getElementById("capitalTextBox");
+            capitalTextBox.value = capital;
+        }
+    </script>
 
 </body>
+
 </html>
